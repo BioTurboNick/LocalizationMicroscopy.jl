@@ -20,7 +20,7 @@ function loadfrom_nikonelementstext(source::Union{String, IO})
     i = 1
     for row ∈ file
         loc =  Localization(i, row.Channel_Name, row.Xwc, row.Ywc, row.Zwc,
-            row.Lateral_Localization_Accuracy, row.Frame, row.Length, 0)
+            row.Lateral_Localization_Accuracy, row.Frame, row.Length)
         push!(localizations, loc)
         i += 1
     end

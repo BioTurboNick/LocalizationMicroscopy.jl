@@ -15,11 +15,13 @@ mutable struct LocalizationGroup <: DataEntity
         new(localization.index, localization.channel, localization.x, localization.y, localization.z, [localization])
 end
 
+import Base.push!
 function push!(group::LocalizationGroup, newlocalization::Localization...)
     push!(group.localizations, newlocalization...)
     calcposition!(group)
 end
 
+import Base.append!
 function append!(group::LocalizationGroup, newlocalizations::Vector{Localization})
     append!(group.localizations, newlocalizations)
     calcposition!(group)

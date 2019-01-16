@@ -1,9 +1,10 @@
-authors = ["Nicholas Bauer <ncbauer@mgh.harvard.edu>"]
 name = "LocalizationMicroscopy"
 uuid = "798e6d30-19ab-11e9-36f8-37cfc5a8426e"
+authors = ["Nicholas Bauer <ncbauer@mgh.harvard.edu>"]
 version = "0.1.0"
 
 [deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

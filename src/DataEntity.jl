@@ -6,4 +6,7 @@ Abstract type for an SMLM data entity that has an index, channel, and x/y/z coor
 abstract type DataEntity
 end
 
-export DataEntity
+extractcoordinates(entity::DataEntity) = [entity.x; entity.y; entity.z]
+extractcoordinates(entities::Vector{DataEntity}) = hcat(extractcoordinates.(entities))
+
+export DataEntity, extractcoordinates

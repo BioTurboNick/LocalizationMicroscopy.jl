@@ -27,9 +27,8 @@ function append!(group::LocalizationGroup, newlocalizations::Vector{Localization
     calcposition!(group)
 end
 
-function append!(group::LocalizationGroup, othergroup::LocalizationGroup)
+append!(group::LocalizationGroup, othergroup::LocalizationGroup) =
     append!(group, othergroup.localizations)
-end
 
 function calcposition!(group::LocalizationGroup)
     count = length(group.localizations)

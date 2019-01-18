@@ -11,7 +11,6 @@ mutable struct LocalizationGroup <: DataEntity
     z::Float64
     localizations::Vector{Localization}
 
-
     LocalizationGroup(localization::Localization) =
         new(localization.index, localization.channel, localization.x, localization.y, localization.z, [localization])
 end

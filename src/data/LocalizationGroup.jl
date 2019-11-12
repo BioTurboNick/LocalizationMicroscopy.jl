@@ -38,5 +38,3 @@ function calcposition!(group::LocalizationGroup)
     group.z = sum(l -> l.z, group.localizations) / count
     return group
 end
-
-export LocalizationGroup, push!, append!

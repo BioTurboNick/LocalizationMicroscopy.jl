@@ -13,5 +13,3 @@ struct Localization <: DataEntity
     frame::Int            # first frame observed
     length::Int           # number of adjacent frames observed over
 end
-
-export Localization

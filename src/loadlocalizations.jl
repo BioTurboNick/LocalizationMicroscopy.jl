@@ -11,7 +11,6 @@ function loadlocalizations(source::Union{String, IO}, inputformat::InputFormat)
     end
 end
 
-using CSV
 import Base.push!
 function loadfrom_nikonelementstext(source::Union{String, IO})
     file = CSV.File(source, delim = '\t', normalizenames = true, types = Dict(1 => String))

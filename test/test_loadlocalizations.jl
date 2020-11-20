@@ -12,7 +12,7 @@
                                 Localization(9,  "488", 38189.6, 22873.5, 0.0, 14.11827, 18538, 1),
                                 Localization(10, "488", 24023.7, 16153.2, 0.0,  9.34327, 22014, 2)]
 
-        localizations = loadlocalizations("nikontestdata.bin.txt", nikonelementstext)
+        localizations = loadlocalizations("test/nikontestdata.bin.txt", nikonelementstext)
 
         @test all(expected .== localizations)
     end

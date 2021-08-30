@@ -1,14 +1,14 @@
 name = "LocalizationMicroscopy"
 uuid = "798e6d30-19ab-11e9-36f8-37cfc5a8426e"
 authors = ["Nicholas Bauer <ncbauer@mgh.harvard.edu>"]
-version = "0.1.2"
+version = "0.1.3"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 
 [compat]
-CSV = "0.4, 0.5, 0.6, 0.7"
+CSV = "0.4, 0.5, 0.6, 0.7, 0.8"
 Plots = "1"
 julia = "1.3"
 

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/BioTurboNick/LocalizationMicroscopy.jl.svg?branch=master)](https://travis-ci.com/BioTurboNick/LocalizationMicroscopy.jl)
+![Build Status](https://github.com/BioTurboNick/LocalizationMicroscopy/actions/workflows/main.yml/badge.svg)
 [![codecov.io](https://codecov.io/github/BioTurboNick/LocalizationMicroscopy.jl/coverage.svg?branch=master)](https://codecov.io/github/BioTurboNick/LocalizationMicroscopy.jl?branch=master)
 
 # LocalizationMicroscopy.jl

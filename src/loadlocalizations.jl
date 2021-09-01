@@ -11,19 +11,8 @@ function loadlocalizations(source::Union{String, IO}, inputformat::InputFormat)
     end
 end
 
-path = raw"D:\Repos\ClusDoC.jl\test\realtest2.bin"
-
 function loadfrom_nikonelementstext(source::Union{String, IO})
     file = CSV.File(source, delim = '\t', normalizenames = true, types = Dict(1 => String))
-    
-    open(source) do f
-        skip(f, 69) # 69-byte header
-        nlocalizations = read(f, Int32)
-        A = Matrix{Float32}(undef, 18, nlocalizations)
-        A = read!(f, A) # table of 18 columns containing floating point values
-
-        [Localization(i, "1", col[3], col[4], col[18],) (i, col) ∈ enumerate(eachrow(A))]
-    end
 
     localizations = Vector{Localization}()
     i = 1
@@ -47,15 +36,6 @@ function loadfrom_nikonelementsbinary(source::Union{String, IO})
         A = read!(f, A) # table of 18 columns containing floating point values
 
         [Localization(i, "1", col[3], col[4], col[18],) (i, col) ∈ enumerate(eachrow(A))]
-    end
-
-    localizations = Vector{Localization}()
-    i = 1
-    for row ∈ file
-        loc =  Localization(i, row.Channel_Name, row.Xwc, row.Ywc, row.Zwc,
-            row.Lateral_Localization_Accuracy, row.Frame, row.Length)
-        push!(localizations, loc)
-        i += 1
     end
     localizations
 end
